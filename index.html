@@ -1,295 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio | Ridho Rizqi Saputra</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
-        .gradient-text { background: linear-gradient(90deg, #2563eb, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .animate-spin-slow { animation: spin-slow 10s linear infinite; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ridho Rizqi Saputra | Performance Marketer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--v:#6c3cff;--p:#ff4fa3;--o:#ff9f1c;--c:#12d6e6;--l:#b6f542;--ink:#1b1240;--bg:#f6f3ff}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden}
+/* BACKGROUND PATTERN (ganti url(...) dengan url('image/bg.jpg') center/cover no-repeat kalau mau pakai foto) */
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><circle cx='60' cy='70' r='22' fill='%23ff4fa3' opacity='.22'/><circle cx='330' cy='310' r='30' fill='%2312d6e6' opacity='.22'/><circle cx='210' cy='190' r='12' fill='%23ff9f1c' opacity='.3'/><circle cx='320' cy='80' r='28' fill='none' stroke='%236c3cff' stroke-width='5' stroke-dasharray='2 12' stroke-linecap='round' opacity='.35'/><path d='M40 300q15-25 30 0t30 0t30 0' fill='none' stroke='%23ff9f1c' stroke-width='6' stroke-linecap='round' opacity='.35'/><path d='M230 40q15-25 30 0t30 0' fill='none' stroke='%2312d6e6' stroke-width='6' stroke-linecap='round' opacity='.4'/><path d='M150 90h24M162 78v24' stroke='%236c3cff' stroke-width='6' stroke-linecap='round' opacity='.35'/><path d='M290 200h20M300 190v20' stroke='%23ff4fa3' stroke-width='6' stroke-linecap='round' opacity='.35'/><path d='M90 190h20M100 180v20' stroke='%23b6f542' stroke-width='6' stroke-linecap='round' opacity='.6'/><path d='M170 330l7 16 17 2-13 12 4 17-15-9-15 9 4-17-13-12 17-2z' fill='%23b6f542' opacity='.55'/><path d='M340 160l22 38h-44z' fill='%23ff9f1c' opacity='.25'/><path d='M20 380l26-26 16 14 34-38' fill='none' stroke='%236c3cff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' opacity='.3'/><path d='M96 318h16v16' fill='none' stroke='%236c3cff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' opacity='.3'/><rect x='250' y='320' width='12' height='26' rx='4' fill='%23ff4fa3' opacity='.25'/><rect x='268' y='304' width='12' height='42' rx='4' fill='%2312d6e6' opacity='.3'/><rect x='286' y='286' width='12' height='60' rx='4' fill='%236c3cff' opacity='.25'/></svg>") center/400px repeat}
+h1,h2,h3,.d{font-family:'Unbounded',sans-serif}
+.gt{background:linear-gradient(90deg,#ff4fa3,#ff9f1c,#b6f542,#12d6e6,#ff4fa3);background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gs 6s linear infinite}
+@keyframes gs{to{background-position:300%}}
+@keyframes morph{0%,100%{border-radius:60% 40% 55% 45%/50% 60% 40% 50%}50%{border-radius:40% 60% 45% 55%/60% 40% 60% 40%}}
+@keyframes spin{to{rotate:360deg}}
+@keyframes float{50%{translate:0 -14px;rotate:6deg}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@keyframes marqr{from{transform:translateX(-50%)}}
+@keyframes kb{from{scale:1}to{scale:1.14}}
+@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.92)}}
+@keyframes wig{25%{rotate:-12deg}75%{rotate:12deg}}
+@keyframes blink{50%{opacity:0}}
+.blob{animation:morph 8s ease-in-out infinite}
+.spin{animation:spin 14s linear infinite}
+.stk{position:absolute;font-size:2.4rem;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 6px 6px #0003)}
+.mq{display:flex;width:max-content;animation:marq 26s linear infinite}
+.mq.r{animation-name:marqr}
+.tile{border-radius:28px;transition:.3s cubic-bezier(.3,1.5,.5,1);box-shadow:0 8px 0 #1b124038}
+button.tile,.tile.h{cursor:pointer;text-align:left}
+button.tile:hover,.tile.h:hover{transform:translateY(-6px) rotate(-1.5deg) scale(1.02);box-shadow:0 16px 0 #1b124038}
+button.tile:hover .em{animation:wig .5s}
+.btn{display:inline-block;border-radius:999px;padding:.85rem 1.6rem;font-weight:600;transition:.2s;box-shadow:0 5px 0 #1b124055}
+.btn:hover{transform:translateY(3px);box-shadow:0 2px 0 #1b124055}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .8s}
+.slide.on{opacity:1}
+.slide.on img{animation:kb 5s ease-out forwards}
+.modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:1rem;background:#1b1240d9;backdrop-filter:blur(6px)}
+.modal.open{display:flex}
+.modal .box{animation:pop .4s cubic-bezier(.2,1.3,.4,1);max-height:92vh;overflow:auto;width:min(780px,100%);position:relative;background:#fff;border-radius:32px}
+.bar>i{display:block;height:100%;width:0;border-radius:99px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.cert{transition:.3s cubic-bezier(.3,1.6,.5,1)}.cert:hover{transform:rotate(0) scale(1.1)!important}
+.org:hover img{transform:scale(1.1) rotate(2deg)}.org img{transition:.6s}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
+<body>
 
-    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden opacity-10">
-        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-500 blur-[120px]"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-500 blur-[120px]"></div>
+<!-- NAV -->
+<nav class="fixed top-4 inset-x-4 z-40 mx-auto max-w-3xl bg-white rounded-full px-3 py-2 flex items-center justify-between shadow-[0_6px_0_#1b124030]">
+  <a href="#top" class="d font-extrabold flex items-center gap-2"><span class="w-9 h-9 rounded-full grid place-items-center text-white text-sm" style="background:linear-gradient(135deg,var(--p),var(--v))">RR</span><span class="hidden sm:block text-sm">Ridho</span></a>
+  <div class="flex items-center gap-5 text-sm font-semibold">
+    <a href="#work" class="hidden sm:block hover:text-[#ff4fa3]">Work</a>
+    <a href="#skills" class="hidden sm:block hover:text-[#ff4fa3]">Skills</a>
+    <a href="#org" class="hidden sm:block hover:text-[#ff4fa3]">Squad</a>
+    <button onclick="openContact(event)" class="btn !py-2 !px-4 text-white" style="background:var(--p)">Let's collab ✨</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="relative overflow-hidden text-white pt-32 pb-24" style="background:radial-gradient(circle at 80% 20%,#ff4fa3 0,transparent 40%),radial-gradient(circle at 10% 90%,#12d6e6aa 0,transparent 40%),linear-gradient(135deg,#6c3cff,#8a4dff)">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative">
+    <div>
+      <span class="inline-block bg-white text-[#1b1240] rounded-full px-4 py-1 text-sm font-semibold">📍 Jakarta Pusat · Open for work</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1] mt-5">Hi, I'm Ridho 👋 I make ads that <span class="gt">actually sell.</span></h1>
+      <p class="text-lg mt-5 opacity-90 max-w-md">Digital Marketing &amp; Performance Specialist for Meta Ads, Google Ads, and Shopee CPAS.</p>
+      <p class="mt-4 font-semibold text-xl h-8">🔥 <span id="type"></span><span style="animation:blink 1s infinite">|</span></p>
+      <div class="mt-7 flex flex-wrap gap-4">
+        <a href="#work" class="btn" style="background:var(--l);color:var(--ink)">See my work</a>
+        <button onclick="openContact(event)" class="btn bg-white text-[#1b1240]">Say hi 👋</button>
+      </div>
     </div>
+    <div class="relative mx-auto w-72 h-72 md:w-[26rem] md:h-[26rem]">
+      <div class="spin absolute -inset-5 blob" style="background:conic-gradient(var(--o),var(--p),var(--c),var(--l),var(--o))"></div>
+      <div class="blob absolute inset-0 overflow-hidden bg-[#ffd23f]"><img src="image/user.jpeg" alt="Ridho Rizqi Saputra" class="w-full h-full object-cover"></div>
+      <svg viewBox="0 0 120 120" class="spin absolute -right-6 -bottom-6 w-28 h-28 text-white" style="animation-duration:12s"><defs><path id="cp" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><circle cx="60" cy="60" r="58" fill="#1b1240"/><text font-size="10" font-weight="700" fill="currentColor" letter-spacing="1"><textPath href="#cp" textLength="270">META ADS • GOOGLE ADS • CPAS •</textPath></text><text x="60" y="68" text-anchor="middle" font-size="26">🚀</text></svg>
+      <span class="stk -left-8 top-4">📈</span>
+      <span class="stk -right-6 top-10" style="animation-delay:-1.5s">💸</span>
+      <span class="stk -left-4 bottom-8" style="animation-delay:-3s">🎯</span>
+    </div>
+  </div>
+</header>
 
-    <header class="relative pt-20 pb-16 px-6">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
-            <div class="relative">
-                <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-full animate-spin-slow blur-sm"></div>
-                <div class="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white relative shadow-2xl">
-                    <img src="image/user.jpeg" alt="Ridho Rizqi Saputra" class="w-full h-full object-cover">
-                </div>
-            </div>
-            
-            <div class="text-center md:text-left">
-                <span class="px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-widest">Available to Work</span>
-                <h1 class="text-5xl font-black mt-4 tracking-tight"><span class="gradient-text">Ridho Rizqi Saputra</span></h1>
-                <p class="text-xl text-slate-600 font-medium mt-2">Digital Marketing & Performance Specialist</p>
-                <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4 text-sm text-slate-500 font-medium">
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-blue-500"></i> Jakarta Pusat</span>
-                    <a href="mailto:ridhorizkisaputra14@gmail.com" class="flex items-center gap-2 hover:text-blue-600 transition-colors"><i class="fa-solid fa-envelope text-purple-500"></i> ridhorizkisaputra14@gmail.com</a>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-blue-500"></i> +62 877 7456 2717</span>
-                    <a href="https://www.linkedin.com/in/ridho-rizqi-saputra-616045386" target="_blank" class="flex items-center gap-2 bg-blue-50 px-3 py-1 rounded-lg text-blue-700 hover:bg-blue-600 hover:text-white transition-all">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+<!-- MARQUEE -->
+<div class="overflow-hidden py-3 -rotate-1 scale-105 mt-[-1.2rem] relative z-10" style="background:var(--l)"><div class="mq d font-extrabold text-lg" id="m1"></div></div>
+<div class="overflow-hidden py-3 rotate-1 scale-105 -mt-1" style="background:var(--o)"><div class="mq r d font-extrabold text-lg" id="m2"></div></div>
 
-    <main class="max-w-5xl mx-auto p-6 space-y-16 pb-20">
+<!-- STATS -->
+<section class="max-w-6xl mx-auto px-6 mt-20 grid grid-cols-2 md:grid-cols-5 gap-4" id="stats"></section>
 
-        <section>
-            <div class="flex items-center gap-4 mb-10">
-                <div class="h-1 w-12 bg-blue-600 rounded-full"></div>
-                <h2 class="text-3xl font-black tracking-tight">Work Experience</h2>
-            </div>
+<!-- WORK -->
+<section id="work" class="max-w-6xl mx-auto px-6 mt-24">
+  <h2 class="text-3xl md:text-5xl font-extrabold">Campaigns &amp; <span class="gt">adventures</span></h2>
+  <p class="mt-3 font-medium">Tap a card to open the full story. 👇</p>
+  <div class="grid md:grid-cols-6 gap-6 mt-8" id="work-grid"></div>
+</section>
 
-            <div class="space-y-12">
-                <!-- Current Role: Digivi Agency -->
-                <div class="group bg-white rounded-3xl p-8 shadow-xl border border-slate-100 transition-all hover:shadow-2xl">
-                    <div class="flex flex-col md:flex-row justify-between mb-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Digivi Agency</h3>
-                            <p class="text-blue-600 font-bold">Digital Marketing Specialist</p>
-                        </div>
-                        <span class="text-sm font-bold text-slate-400 mt-2 md:mt-0 px-4 py-2 bg-slate-50 rounded-xl">July 2026 - Present</span>
-                    </div>
-                    <ul class="space-y-3 text-slate-600 mb-8 list-disc pl-5">
-                        <li>Spearheaded Collaborative Performance Ads (CPAS) integrated directly with Shopee, maintaining an outstanding average ROAS of 18x+ per month.</li>
-                        <li>Managed ad spend of IDR 12.5M+ per month across accounts, successfully generating over IDR 200M in total monthly purchase value.</li>
-                        <li>Independently handled performance marketing strategies and end-to-end execution for 10+ active client accounts simultaneously each month.</li>
-                        <li>Led Quality Control (QC) across all internal marketing divisions, ensuring high standards for creative briefs, ad assets, audience targeting, and campaign setup.</li>
-                    </ul>
+<!-- SKILLS -->
+<section id="skills" class="max-w-6xl mx-auto px-6 mt-24 grid md:grid-cols-5 gap-6">
+  <div class="tile bg-white p-8 md:col-span-3">
+    <h2 class="text-2xl font-extrabold mb-6">Skill power-ups ⚡</h2>
+    <div class="space-y-4" id="bars"></div>
+  </div>
+  <div class="md:col-span-2 tile p-8 text-white" style="background:var(--v)">
+    <h2 class="text-2xl font-extrabold">Certified nerd 🎓</h2>
+    <p class="mt-1 opacity-90">Hover the stickers.</p>
+    <div class="flex flex-wrap gap-3 mt-6" id="certs"></div>
+  </div>
+</section>
 
-                    <!-- Grid 3 Foto Digivi Agency -->
-                    <div class="flex flex-col lg:flex-row gap-4 justify-center items-center">
-                        <div class="lg:w-2/3 h-[250px] w-full bg-slate-100 rounded-2xl overflow-hidden">
-                            <img src="image/DIGIVI.jpg" class="rounded-2xl w-full h-full object-cover object-bottom border shadow-md hover:scale-[1.02] transition-transform" alt="Digivi Main Highlight">
-                        </div>
-                        <div class="lg:w-1/3 flex flex-col gap-3 w-full">
-                            <img src="image/Rafly.jpg" class="rounded-xl h-[118px] w-full object-cover object-center border shadow-sm hover:scale-[1.02] transition-transform" alt="Digivi Project 2">
-                            <img src="image/dgm.jpg" class="rounded-xl h-[118px] w-full object-cover object-center border shadow-sm hover:scale-[1.02] transition-transform" alt="Digivi Project 3">
-                        </div>
-                    </div>
-                </div>
+<!-- ORG -->
+<section id="org" class="max-w-6xl mx-auto px-6 mt-24">
+  <h2 class="text-3xl md:text-5xl font-extrabold">The <span class="gt">squads</span> I led</h2>
+  <p class="mt-3 font-medium">Tap a card for details.</p>
+  <div class="grid md:grid-cols-3 gap-8 mt-8" id="org-grid"></div>
+</section>
 
-                <!-- Role: PT Sinshe Tongren Indonesia -->
-                <div class="group bg-white rounded-3xl p-8 shadow-xl border border-slate-100 transition-all hover:shadow-2xl">
-                    <div class="flex flex-col md:flex-row justify-between mb-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">PT Sinshe Tongren Indonesia</h3>
-                            <p class="text-blue-600 font-bold">Leader Digital Marketing</p>
-                        </div>
-                        <span class="text-sm font-bold text-slate-400 mt-2 md:mt-0 px-4 py-2 bg-slate-50 rounded-xl">November - April 2025</span>
-                    </div>
-                    <ul class="space-y-3 text-slate-600 mb-8 list-disc pl-5">
-                        <li>Spearheaded end-to-end performance marketing campaigns that successfully generated 5,400+ high-quality patient leads within a single month.</li>
-                        <li>Optimized Meta Ads budget and creative assets, resulting in a significantly lower CPL/CPR while maintaining high conversion rates.</li>
-                        <li>Developed high-converting video scripts and visual content tailored for various healthcare concerns (Traditional Chinese Medicine), increasing audience engagement and trust.</li>
-                        <li>Led and managed a cross-functional team of 35 professionals, consisting of 27 Customer Service representatives, 4 Graphic Designers, and 4 Digital Marketing specialists.</li>
-                    </ul>
-                    <div class="flex flex-col lg:flex-row gap-4">
-                        <div class="lg:w-2/3 h-[336px]">
-                            <img src="image/Tongren1.jpeg" class="rounded-2xl w-full h-full object-cover border shadow-md hover:scale-[1.02] transition-transform" alt="Main Project Highlight">
-                        </div>
-                        
-                        <div class="lg:w-1/3 grid grid-cols-2 gap-3">
-                            <img src="image/akun1.jpg" class="rounded-xl h-[160px] w-full object-cover border shadow-sm hover:scale-105 transition-transform" alt="Ads 1">
-                            <img src="image/akun2.jpeg" class="rounded-xl h-[160px] w-full object-cover border shadow-sm hover:scale-105 transition-transform" alt="Ads 2">
-                            <img src="image/akun3.png" class="rounded-xl h-[160px] w-full object-cover border shadow-sm hover:scale-105 transition-transform" alt="Ads 3">
-                            <img src="image/akun4.png" class="rounded-xl h-[160px] w-full object-cover border shadow-sm hover:scale-105 transition-transform" alt="Ads 4">
-                        </div>
-                    </div>
-                </div>
+<footer class="mt-28 text-center text-white py-20 px-6" style="background:var(--ink)">
+  <h2 class="text-4xl md:text-7xl font-extrabold gt inline-block">Let's make some noise!</h2>
+  <div class="mt-8"><button onclick="openContact(event)" class="btn" style="background:var(--p)">Start a project 🚀</button></div>
+  <p class="mt-12 text-sm opacity-60">© 2026 Ridho Rizqi Saputra</p>
+</footer>
 
-                <!-- Role: PT Melon Agency -->
-                <div class="group bg-white rounded-3xl p-8 shadow-xl border border-slate-100 transition-all hover:shadow-2xl">
-                    <div class="flex flex-col md:flex-row justify-between mb-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">PT Melon Agency</h3>
-                            <p class="text-blue-600 font-bold">Digital Marketing & Performance Specialist</p>
-                        </div>
-                        <span class="text-sm font-bold text-slate-400 mt-2 md:mt-0 px-4 py-2 bg-slate-50 rounded-xl">Mei - Juni 2026</span>
-                    </div>
-                    <ul class="space-y-3 text-slate-600 list-disc pl-5">
-                        <li>Managed and optimized digital advertising campaigns across Meta Ads (Facebook & Instagram Ads) to drive lead generation, website traffic, and brand awareness.</li>
-                        <li>Analyzed campaign performance using Google Analytics, Google Search Console, Meta Ads Manager, and Google Ads, providing data-driven insights and recommendations to achieve clients' marketing objectives.</li>
-                        <li>Implemented and managed SEO strategies, including keyword research, on-page optimization, technical SEO, and performance monitoring to increase organic traffic and search rankings.</li>
-                        <li>Managed advertising budgets, monitored key performance metrics (CTR, CPC, CPL, CPA, and ROAS), and continuously optimized campaigns to improve overall performance.</li>
-                    </ul>
-                </div>
+<div class="modal" id="modal" onclick="if(event.target===this)closeM()" role="dialog" aria-modal="true"><div class="box" id="mbox"></div></div>
 
-                <!-- Secondary Roles Grid -->
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-2 transition-all">
-                        <h3 class="text-xl font-bold">PT TDM Honda Saharjo</h3>
-                        <p class="text-blue-600 font-bold text-sm mb-4">Digital Marketing | September - November 2025</p>
-                        <ul class="text-sm text-slate-600 space-y-2 mb-6">
-                            <li>• Executed digital marketing campaigns focusing on Meta Ads and CRM to enhance brand visibility, engagement, and sales performance and Generated 85+ sales leads per week from organic reach through effective digital optimization and customer outreach strategies.</li>
-                            <li>• Responsible for selling Honda motorcycles and optimizing digital tools such as Cekat to increase leads and support sales growth.</li>
-                            <li>• Optimizing WhatsApp blasting to reach more potential customers and support overall sales performance.</li>
-                            <li>• Uploaded 10+ product listings daily across various online marketplaces, generating 500+ weekly insights and boosting product visibility.</li>
-                        </ul>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden shadow-inner aspect-[3/4] flex items-center justify-center">
-                                <img src="image/Honda.jpeg" class="w-full h-full object-contain" alt="Honda Project 1">
-                            </div>
-                            <div class="bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden shadow-inner aspect-[3/4] flex items-center justify-center">
-                                <img src="image/Honda2.jpeg" class="w-full h-full object-contain" alt="Honda Project 2">
-                            </div>
-                        </div>
-                    </div>
+<script>
+const E=[
+{co:'Digivi Agency',role:'Digital Marketing Specialist',per:'July 2026 – Present',em:'🚀',tag:'Now',bg:'#ff4fa3',fg:'#fff',sp:'md:col-span-4',imgs:['DIGIVI.jpg','Rafly.jpg','dgm.jpg'],
+ st:[['18x+','Avg. monthly ROAS'],['IDR 200M+','Monthly purchase value'],['10+','Active clients']],
+ b:['Spearheaded Collaborative Performance Ads (CPAS) integrated directly with Shopee, maintaining an average ROAS of 18x+ per month.','Managed ad spend of IDR 12.5M+ per month across accounts, generating over IDR 200M in total monthly purchase value.','Independently handled performance marketing strategy and end-to-end execution for 10+ active client accounts each month.','Led Quality Control across all internal marketing divisions: creative briefs, ad assets, audience targeting, and campaign setup.']},
+{co:'PT Sinshe Tongren Indonesia',role:'Leader Digital Marketing',per:'November – April 2025',em:'🌿',tag:'Team lead',bg:'#6c3cff',fg:'#fff',sp:'md:col-span-2',imgs:['Tongren1.jpeg','akun1.jpg','akun2.jpeg','akun3.png','akun4.png'],
+ st:[['5,400+','Leads in one month'],['35','People led'],['Lower','CPL / CPR']],
+ b:['Ran end-to-end performance campaigns that generated 5,400+ high-quality patient leads within a single month.','Optimized Meta Ads budget and creative assets, lowering CPL/CPR while keeping conversion rates high.','Developed video scripts and visual content for various healthcare concerns (Traditional Chinese Medicine), increasing engagement and trust.','Led a cross-functional team of 35: 27 Customer Service reps, 4 Graphic Designers, and 4 Digital Marketing specialists.']},
+{co:'PT Melon Agency',role:'Digital Marketing & Performance Specialist',per:'May – June 2026',em:'🍈',tag:'Agency',bg:'#b6f542',fg:'#1b1240',sp:'md:col-span-2',imgs:[],
+ st:[['Meta','Ads'],['SEO','On-page + technical'],['GA4','Analytics']],
+ b:['Managed and optimized Meta Ads (Facebook & Instagram) to drive lead generation, website traffic, and brand awareness.','Analyzed performance with Google Analytics, Search Console, Meta Ads Manager, and Google Ads, then turned the data into recommendations.','Ran SEO strategy: keyword research, on-page optimization, technical SEO, and performance monitoring.','Managed budgets and tracked CTR, CPC, CPL, CPA, and ROAS to keep improving results.']},
+{co:'PT TDM Honda Saharjo',role:'Digital Marketing',per:'September – November 2025',em:'🏍️',tag:'Sales + Ads',bg:'#ff9f1c',fg:'#1b1240',sp:'md:col-span-2',imgs:['Honda.jpeg','Honda2.jpeg'],
+ st:[['85+','Leads per week'],['10+','Listings per day'],['500+','Weekly insights']],
+ b:['Ran Meta Ads and CRM campaigns to lift brand visibility, engagement, and sales, generating 85+ sales leads per week from organic reach.','Sold Honda motorcycles and used digital tools such as Cekat to grow leads and support sales.','Optimized WhatsApp blasting to reach more potential customers.','Uploaded 10+ product listings daily across online marketplaces, generating 500+ weekly insights.']},
+{co:'Strongstore (Game Top Up)',role:'Owner',per:'June 2024 – September 2025',em:'🎮',tag:'My own biz',bg:'#12d6e6',fg:'#1b1240',sp:'md:col-span-2',imgs:['StoreStrong.png'],
+ st:[['55+','Sales per month'],['3,000','Avg. insights / post'],['18K','Peak insights']],
+ b:['Managed digital marketing, customer service, promo design, and admin/data processing in Microsoft Office.','Captured a significant share of the trading market. Order volume was high enough to influence market pricing, which competitors later adopted.','Reached 55+ customer sales per month through consistent follow-up and sales strategy.','Averaged 3,000 insights per post, with peaks of 17,000–18,000.']},
+{co:'PT Indonesia Gaming Arena',role:'Event Field Coordinator',per:'June 2020 – May 2023',em:'🏆',tag:'Esports',bg:'#ffd23f',fg:'#1b1240',sp:'md:col-span-3',imgs:[],
+ st:[['3 yrs','Tournament ops'],['National','+ international']],
+ b:['Supported national and international gaming tournaments as referee and judge, keeping discipline and sportsmanship on the field.','Used English to guide players and help whenever issues came up.','Built event rundown schedules in MS Office for accurate timing and smooth preparation.']},
+{co:'PT Garena Indonesia',role:'Community Builder',per:'March 2018 – August 2019',em:'👾',tag:'Community',bg:'#1b1240',fg:'#fff',sp:'md:col-span-3',imgs:[],
+ st:[['Gamers','Community first']],
+ b:['Linked internal teams and the community, making sure player feedback reached the right people.','Supported community events with simple content designed to catch members\' attention.','Surveyed internet cafes one by one to educate players on proper gameplay and improve their experience.']}
+];
+const ORG=[
+['Himpunan Mahasiswa Manajemen','Interest & Talent Member','Led Badminton & Esports tournaments, boosting student engagement through competitive and collaborative events.','Himamen.jpg','#ffd23f','🏸'],
+['Bengkel Sepeoloeh','Head of Art & Culture','Organized the "Pesta Rakyat" concert with 300+ attendees and ran music training for aspiring musicians.','Bten.jpg','#12d6e6','🎸'],
+['Karang Taruna','Head of Art & Culture','Ran seminars, workshops, and community social programs to empower local youth and creativity.','Katar.jpg','#ff4fa3','🎤']];
+const COL=['#ff4fa3','#6c3cff','#ff9f1c','#12d6e6','#b6f542'];
+const SK=[['Meta Ads',97],['Teamwork',96],['Performance Marketing',92],['Problem Solving',92],['Customer Relationship Management',90],['Leadership',90],['Customer Service',90],['Microsoft Office',87],['Google Ads',80],['SEO & SEM',80],['Visual Studio Code',60]];
+const CERT=['RevoU – Intro to Digital Marketing','E-Marketing Strategies Planner','Brand Promotion Strategy Development','Effective Business Communication','Application of Marketing Promotion','Marketing Research Planning','Marketing Environment Analysis','Myskill – Intro to Product Management'];
+const ST=[[18,'x+','Avg. monthly ROAS','#ff4fa3','#fff'],[200,'M+','IDR monthly purchase value','#b6f542','#1b1240'],[5400,'+','Leads in one month','#12d6e6','#1b1240'],[35,'','People led','#ff9f1c','#1b1240'],[10,'+','Clients at once','#6c3cff','#fff']];
+const TOOLS=['META ADS','GOOGLE ADS','SHOPEE CPAS','SEO','CRM','ANALYTICS','TEAM LEAD','VIDEO SCRIPTS'];
+const $=s=>document.querySelector(s);
 
-                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:-translate-y-2 transition-all">
-                        <h3 class="text-xl font-bold">Strongstore (Game Top Up)</h3>
-                        <p class="text-blue-600 font-bold text-sm mb-4">Owner | June 2024 - September 2025 </p>
-                        <ul class="text-sm text-slate-600 space-y-2 mb-6">
-                            <li>• As a Store Owner, i am responsible for managing digital marketing strategies, providing customer service, creating promotional designs, and handling administration and data processing using Microsoft Office through direct supervision on the field. </li>
-                            <li>• I successfully captured a significant share of the trading market. Due to the high volume of incoming orders, I was able to influence market pricing, which was later adopted by competing businesses.</li>
-                            <li>• Achieved 55+ customer sales per month through consistent follow-up and effective sales strategies.</li>
-                            <li>• Gained an average of 3,000 insights per post, with peak performance reaching 17,000-18,000 insights.</li>
-                        </ul>
-                        <img src="image/StoreStrong.png" class="w-full h-48 object-cover rounded-2xl shadow-inner" alt="Strongstore Project">
-                    </div>
-                </div>
+$('#m1').innerHTML=[...TOOLS,...TOOLS].map(t=>`<span class="px-5">${t} ✦</span>`).join('');
+$('#m2').innerHTML=[...TOOLS.slice().reverse(),...TOOLS.slice().reverse()].map(t=>`<span class="px-5">${t} ★</span>`).join('');
+$('#stats').innerHTML=ST.map((s,i)=>`<div class="tile h p-5 text-center" style="background:${s[3]};color:${s[4]};rotate:${i%2?1.5:-1.5}deg"><div class="d text-3xl md:text-4xl font-extrabold"><span data-n="${s[0]}">0</span>${s[1]}</div><div class="text-sm font-medium mt-1">${s[2]}</div></div>`).join('');
 
-                <!-- Past Corporate Experience -->
-                <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden group">
-                    <div class="relative z-10">
-                        <h3 class="text-xl font-bold">PT Indonesia Gaming Arena</h3>
-                        <p class="text-blue-400 font-bold text-sm mb-4">Event Field Coordinator | June 2020 - May 2023</p>
-                        <ul class="text-sm text-slate-300 space-y-2 list-disc pl-5">
-                            <li>Supporting the smooth running of national and international gaming tournaments by carrying out the role of referee and judge professionally, as well as maintaining discipline and sportsmanship of participants through direct supervision on the field.</li>
-                            <li>Utilized English communication skills to guide players and provide support whenever issues occurred.</li>
-                            <li>Organized event rundown schedules using MS Office to ensure accurate time management and smooth event preparation.</li>
-                        </ul>
-                    </div>
-                </div>
+$('#work-grid').innerHTML=E.map((e,i)=>`<button class="tile ${e.sp} overflow-hidden flex flex-col" style="background:${e.bg};color:${e.fg}" onclick="openWork(${i},event)">
+ <div class="relative h-44 w-full overflow-hidden flex items-center justify-center bg-black/10">
+  ${e.imgs.length?e.imgs.slice(0,3).map((m,k)=>`<div class="slide thumb-${i} ${k?'':'on'}"><img src="image/${m}" alt="" class="w-full h-full object-cover object-top"></div>`).join(''):`<span class="em text-7xl">${e.em}</span>`}
+  <span class="absolute top-3 left-3 bg-white text-[#1b1240] rounded-full px-3 py-0.5 text-xs font-semibold">${e.tag}</span>
+ </div>
+ <div class="p-6"><p class="text-sm font-semibold opacity-80">${e.per}</p><h3 class="text-lg font-extrabold mt-1 leading-snug">${e.co}</h3><p class="font-medium opacity-90">${e.role}</p>
+ <p class="mt-3 font-semibold"><span class="d text-xl">${e.st[0][0]}</span> ${e.st[0][1]}</p></div></button>`).join('');
+setInterval(()=>E.forEach((e,i)=>{const t=document.querySelectorAll('.thumb-'+i);if(t.length<2)return;const k=[...t].findIndex(x=>x.classList.contains('on'));t[k].classList.remove('on');t[(k+1)%t.length].classList.add('on')}),3000);
 
-                <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden group">
-                    <div class="relative z-10">
-                        <h3 class="text-xl font-bold">PT Garena Indonesia</h3>
-                        <p class="text-blue-400 font-bold text-sm mb-4">Community Builder | March 2018 - August 2019</p>
-                        <ul class="text-sm text-slate-300 space-y-2 list-disc pl-5">
-                            <li>Act as a liaison between internal teams and the community by ensuring player feedback is communicated effectively, while also supporting the implementation of community events by creating simple content that can attract members' attention.</li>
-                            <li>Conducted surveys from one internet cafe to another to educate players on proper gameplay and improve their overall experience.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+$('#org-grid').innerHTML=ORG.map((o,i)=>`<button class="tile org overflow-hidden" style="background:${o[4]};rotate:${[-1.5,1,-1][i]}deg" onclick="openOrg(${i},event)"><div class="h-48 overflow-hidden"><img src="image/${o[3]}" alt="${o[0]}" class="w-full h-full object-cover"></div><div class="p-6"><span class="text-3xl">${o[5]}</span><h3 class="font-extrabold text-lg mt-1">${o[0]}</h3><p class="font-semibold text-sm opacity-80">${o[1]}</p></div></button>`).join('');
 
-        <!-- Organization Section -->
-        <section>
-            <div class="flex items-center gap-4 mb-10">
-                <div class="h-1 w-12 bg-purple-600 rounded-full"></div>
-                <h2 class="text-3xl font-black tracking-tight">Organization & Leadership</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass rounded-3xl border border-slate-200 overflow-hidden flex flex-col hover:-translate-y-2 transition-all shadow-lg">
-                    <div class="h-48 w-full overflow-hidden">
-                        <img src="image/Himamen.jpg" class="w-full h-full object-cover" alt="Student Association">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-slate-900 text-lg">Himpunan Mahasiswa Manajemen</h3>
-                        <p class="text-xs font-bold text-purple-600 mb-3 uppercase tracking-wider">Interest & Talent Member</p>
-                        <p class="text-sm text-slate-600 leading-relaxed">Led Badminton & Esports tournaments, boosting student engagement significantly through competitive and collaborative events.</p>
-                    </div>
-                </div>
+$('#bars').innerHTML=SK.map((s,i)=>`<div><div class="flex justify-between text-sm font-semibold mb-1"><span>${s[0]}</span><span>${s[1]}%</span></div><div class="bar h-3.5 bg-[#ece7ff] rounded-full overflow-hidden"><i data-w="${s[1]}" style="background:${COL[i%5]}"></i></div></div>`).join('');
+$('#certs').innerHTML=CERT.map((c,i)=>`<span class="cert rounded-2xl px-3 py-2 text-sm font-semibold" style="background:${COL[(i+2)%5]};color:${['#fff','#fff','#1b1240','#1b1240','#1b1240'][(i+2)%5]};rotate:${[-3,2,-1,3,-2,1][i%6]}deg">🏅 ${c}</span>`).join('');
 
-                <div class="glass rounded-3xl border border-slate-200 overflow-hidden flex flex-col hover:-translate-y-2 transition-all shadow-lg">
-                    <div class="h-48 w-full overflow-hidden">
-                        <img src="image/Bten.jpg" class="w-full h-full object-cover" alt="Bengkel Sepeoloeh">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-slate-900 text-lg">Bengkel Sepeoloeh</h3>
-                        <p class="text-xs font-bold text-purple-600 mb-3 uppercase tracking-wider">Head of Art & Culture</p>
-                        <p class="text-sm text-slate-600 leading-relaxed">Organized "Pesta Rakyat" concert with 300+ attendees and managed music training programs for aspiring musicians.</p>
-                    </div>
-                </div>
+// modal
+let tm,n=0;
+function openM(h){$('#mbox').innerHTML=h;$('#modal').classList.add('open');document.body.style.overflow='hidden'}
+function closeM(){$('#modal').classList.remove('open');document.body.style.overflow='';clearInterval(tm)}
+const X=`<button onclick="closeM()" aria-label="Close" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white font-extrabold shadow-[0_3px_0_#1b124055]">✕</button>`;
+function go(d){const s=document.querySelectorAll('#car .slide'),t=document.querySelectorAll('#dots i');if(s.length<2)return;s[n].classList.remove('on');t[n].style.background='#fff';n=(n+d+s.length)%s.length;s[n].classList.add('on');t[n].style.background='var(--p)'}
+function openWork(i,ev){
+ const e=E[i];n=0;clearInterval(tm);boom(ev,6);
+ openM(`${X}${e.imgs.length?`<div id="car" class="relative h-64 md:h-80 overflow-hidden rounded-t-[32px]" style="background:${e.bg}">
+  ${e.imgs.map((m,k)=>`<div class="slide ${k?'':'on'}"><img src="image/${m}" alt="${e.co} ${k+1}" class="w-full h-full object-cover"></div>`).join('')}
+  ${e.imgs.length>1?`<button class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white font-bold shadow" onclick="go(-1)">‹</button><button class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white font-bold shadow" onclick="go(1)">›</button>
+  <div class="absolute bottom-3 inset-x-0 flex justify-center gap-2" id="dots">${e.imgs.map((_,k)=>`<i class="w-3 h-3 rounded-full shadow" style="background:${k?'#fff':'var(--p)'}"></i>`).join('')}</div>`:''}</div>`
+ :`<div class="h-36 grid place-items-center text-7xl rounded-t-[32px]" style="background:${e.bg}">${e.em}</div>`}
+ <div class="p-6 md:p-8"><span class="inline-block rounded-full px-3 py-1 text-xs font-semibold" style="background:${e.bg};color:${e.fg}">${e.per}</span>
+ <h3 class="text-2xl md:text-3xl font-extrabold mt-3">${e.co}</h3><p class="font-semibold opacity-70">${e.role}</p>
+ <div class="grid grid-cols-3 gap-3 my-6">${e.st.map((s,k)=>`<div class="rounded-2xl p-3 text-center" style="background:${COL[(i+k)%5]}33"><div class="d font-extrabold text-lg">${s[0]}</div><div class="text-xs font-medium">${s[1]}</div></div>`).join('')}</div>
+ <ul class="space-y-3">${e.b.map((x,k)=>`<li class="flex gap-3"><span class="shrink-0 w-6 h-6 rounded-full grid place-items-center text-xs font-bold text-white" style="background:${COL[(i+k)%5]}">★</span><span>${x}</span></li>`).join('')}</ul></div>`);
+ if(e.imgs.length>1)tm=setInterval(()=>go(1),3500);
+}
+function openOrg(i,ev){const o=ORG[i];boom(ev,6);openM(`${X}<div class="h-64 overflow-hidden rounded-t-[32px]"><img src="image/${o[3]}" alt="${o[0]}" class="w-full h-full object-cover" style="animation:kb 6s ease-out forwards"></div><div class="p-6 md:p-8"><span class="text-4xl">${o[5]}</span><h3 class="text-2xl font-extrabold mt-2">${o[0]}</h3><p class="inline-block rounded-full px-3 py-1 text-sm font-semibold mt-2" style="background:${o[4]}">${o[1]}</p><p class="mt-4 text-lg">${o[2]}</p></div>`)}
+function openContact(ev){boom(ev,16);openM(`${X}<div class="p-6 md:p-8"><h3 class="text-3xl font-extrabold">Let's <span class="gt">collab!</span> 🎉</h3><p class="mt-2 mb-6 font-medium">Pick your favorite way to reach me.</p><div class="space-y-3">
+<a class="btn w-full text-center text-[#1b1240]" style="background:var(--l)" target="_blank" href="https://wa.me/6287774562717">💬 WhatsApp +62 877 7456 2717</a>
+<a class="btn w-full text-center text-[#1b1240]" style="background:var(--o)" href="mailto:ridhorizkisaputra14@gmail.com">✉️ ridhorizkisaputra14@gmail.com</a>
+<a class="btn w-full text-center text-white" style="background:var(--v)" target="_blank" href="https://www.linkedin.com/in/ridho-rizqi-saputra-616045386">💼 LinkedIn</a></div></div>`)}
+addEventListener('keydown',e=>{if(e.key==='Escape')closeM()});
 
-                <div class="glass rounded-3xl border border-slate-200 overflow-hidden flex flex-col hover:-translate-y-2 transition-all shadow-lg">
-                    <div class="h-48 w-full overflow-hidden">
-                        <img src="image/Katar.jpg" class="w-full h-full object-cover" alt="Karang Taruna">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-slate-900 text-lg">Karang Taruna</h3>
-                        <p class="text-xs font-bold text-purple-600 mb-3 uppercase tracking-wider">Head of Art & Culture</p>
-                        <p class="text-sm text-slate-600 leading-relaxed">Responsible for seminars, workshops, and community-themed social programs to empower local youth and creativity.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+// confetti
+function boom(ev,k){if(!ev||matchMedia('(prefers-reduced-motion:reduce)').matches)return;const E='🎉✨💥📈💸🔥⭐'.match(/./gu);
+ for(let i=0;i<k;i++){const s=document.createElement('span');s.textContent=E[i%E.length];s.style.cssText=`position:fixed;left:${ev.clientX}px;top:${ev.clientY}px;font-size:1.6rem;z-index:80;pointer-events:none`;document.body.appendChild(s);
+ const a=Math.random()*Math.PI*2,d=70+Math.random()*120;s.animate([{transform:'translate(0,0) scale(.4)',opacity:1},{transform:`translate(${Math.cos(a)*d}px,${Math.sin(a)*d+60}px) rotate(${Math.random()*360}deg) scale(1.2)`,opacity:0}],{duration:900+Math.random()*400,easing:'cubic-bezier(.2,.8,.3,1)'}).onfinish=()=>s.remove()}}
 
-        <!-- Skills & Certifications Section -->
-        <section class="grid md:grid-cols-2 gap-10 pb-10">
-            <div class="glass p-8 rounded-3xl">
-                <h2 class="text-xl font-black mb-6 flex items-center gap-2"><i class="fa-solid fa-bolt text-yellow-500"></i> Professional Skills</h2>
-                <div class="space-y-4">
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Meta Ads</span><span class="text-purple-600">97%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-purple-600 h-full w-[97%]"></div></div>
+// typing
+const P=['18x+ ROAS on Shopee CPAS','5,400+ leads in one month','Led a squad of 35 people','10+ clients managed at once'];let pi=0,ci=0,del=0;
+(function t(){const w=P[pi];ci+=del?-1:1;$('#type').textContent=w.slice(0,ci);let d=del?30:60;if(!del&&ci===w.length){del=1;d=1400}else if(del&&!ci){del=0;pi=(pi+1)%P.length;d=300}setTimeout(t,d)})();
 
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Google Ads</span><span class="text-blue-600">80%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-blue-600 h-full w-[80%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>SEO & SEM</span><span class="text-blue-600">80%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-blue-600 h-full w-[80%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Customer Relationship Management</span><span class="text-purple-600">90%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-purple-600 h-full w-[90%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Microsoft Office</span><span class="text-blue-600">87%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-blue-600 h-full w-[87%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Performance Marketing</span><span class="text-purple-600">92%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-purple-600 h-full w-[92%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Leadership</span><span class="text-blue-600">90%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-blue-600 h-full w-[90%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Customer Service</span><span class="text-blue-600">90%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-blue-600 h-full w-[90%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>TeamWork</span><span class="text-purple-600">96%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-purple-600 h-full w-[96%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Visual Studio Code</span><span class="text-pink-600">60%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-pink-600 h-full w-[60%]"></div></div>
-
-                    <div class="flex justify-between text-xs font-bold uppercase"><span>Problem Solving</span><span class="text-purple-600">92%</span></div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden"><div class="bg-purple-600 h-full w-[92%]"></div></div>
-                </div>
-            </div>
-            <div class="glass p-8 rounded-3xl">
-                <h2 class="text-xl font-black mb-6 flex items-center gap-2"><i class="fa-solid fa-certificate text-blue-500"></i> Certifications</h2>
-                <ul class="text-sm space-y-2 text-slate-600">
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> RevoU - Intro to Digital Marketing</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> E-Marketing Strategies Planner</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> Brand Promotion Strategy Development</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> Effective Business Communication</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> Application of Marketing Promotion</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> Marketing Research Planning</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> Marketing Environment Analysis</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> Effective Business Communication</li>
-                    <li class="flex gap-2"><i class="fa-solid fa-check text-green-500"></i> Myskill - Introduction to Product Management</li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-white border-t border-slate-100 py-12 text-center">
-        <p class="text-slate-400 text-sm font-medium">© 2026 Crafted with Excellence by Ridho Rizqi Saputra</p>
-    </footer>
-
+// counters + bars
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const el=en.target;
+ el.querySelectorAll('[data-n]').forEach(m=>{const to=+m.dataset.n,t0=performance.now();(function f(t){const p=Math.min((t-t0)/1500,1);m.textContent=Math.round(to*(1-Math.pow(1-p,3))).toLocaleString();p<1&&requestAnimationFrame(f)})(t0)});
+ el.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');io.unobserve(el)}),{threshold:.25});
+io.observe($('#stats'));io.observe($('#bars'));
+</script>
 </body>
 </html>
